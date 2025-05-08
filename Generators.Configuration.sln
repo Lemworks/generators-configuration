@@ -1,6 +1,14 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppSettingsGenerator", "AppSettingsGenerator\AppSettingsGenerator.csproj", "{CC7C358A-9008-4D92-B85D-7D8A8F602E7A}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{762F1FD3-EB7B-45CC-A962-E4E9DDB5D2DF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppSettingsGenerator", "src\AppSettingsGenerator\AppSettingsGenerator.csproj", "{CC7C358A-9008-4D92-B85D-7D8A8F602E7A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "items", "items", "{DF6F9C39-1CFF-4529-98F6-0DA81C5F3F67}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -12,5 +20,8 @@ Global
 		{CC7C358A-9008-4D92-B85D-7D8A8F602E7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CC7C358A-9008-4D92-B85D-7D8A8F602E7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CC7C358A-9008-4D92-B85D-7D8A8F602E7A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CC7C358A-9008-4D92-B85D-7D8A8F602E7A} = {762F1FD3-EB7B-45CC-A962-E4E9DDB5D2DF}
 	EndGlobalSection
 EndGlobal
