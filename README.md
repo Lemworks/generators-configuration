@@ -1,3 +1,3 @@
 # Configuration source generation
 
-Source generated configuration keys from your appsettings.json
+Source-generated configuration keys from your appsettings.json
