@@ -1,6 +1,6 @@
 ﻿namespace AppSettingsGenerator;
 
-public readonly struct AppSettingsFile
+public record AppSettingsFile
 {
     public readonly string FileName;
     
