@@ -42,7 +42,6 @@ public class AppSettingsGenerator : IIncrementalGenerator
         });
 
         var depth = 1;
-        var inArray = false;
         Stack<string> stack = new();
         while (reader.Read())
         {
@@ -89,7 +88,7 @@ public class AppSettingsGenerator : IIncrementalGenerator
                 case JsonTokenType.False:
                 case JsonTokenType.Null:
                 {
-                    if (!inArray && stack.Count > 0)
+                    if (stack.Count > 0)
                     {
                         builder.Append(Indent(depth));
                         builder.Append("public const string ");
@@ -98,15 +97,6 @@ public class AppSettingsGenerator : IIncrementalGenerator
                         builder.Append(string.Join("__", stack.Reverse()));
                         builder.AppendLine("\";");
                         stack.Pop();
-                    }
-
-                    if (reader.TokenType == JsonTokenType.StartArray)
-                    {
-                        inArray = true;
-                    }
-                    else if (reader.TokenType == JsonTokenType.EndArray)
-                    {
-                        inArray = false;
                     }
 
                     break;

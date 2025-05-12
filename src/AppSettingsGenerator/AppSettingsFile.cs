@@ -1,14 +1,14 @@
 ﻿namespace AppSettingsGenerator;
 
-public record AppSettingsFile
+public class AppSettingsFile
 {
-    public readonly string FileName;
+    public string FileName { get; }
     
-    public readonly string Text;
+    public string Text  { get; }
 
     public AppSettingsFile(string fileName, string? text)
     {
         FileName = fileName;
-        Text = string.IsNullOrWhiteSpace(text) ? "{}" : text!;
+        Text = !string.IsNullOrWhiteSpace(text) ? text! : "{}";
     }
 }
