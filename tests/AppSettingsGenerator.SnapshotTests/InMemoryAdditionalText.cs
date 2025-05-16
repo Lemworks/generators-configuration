@@ -3,7 +3,7 @@ using Microsoft.CodeAnalysis.Text;
 
 namespace AppSettingsGenerator.SnapshotTests;
 
-public class InMemoryAdditionalText : AdditionalText
+internal sealed class InMemoryAdditionalText : AdditionalText
 {
     private readonly string _text;
     

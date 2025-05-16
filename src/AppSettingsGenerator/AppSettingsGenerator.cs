@@ -6,7 +6,7 @@ using Microsoft.CodeAnalysis.Text;
 namespace AppSettingsGenerator;
 
 [Generator]
-public class AppSettingsGenerator : IIncrementalGenerator
+internal class AppSettingsGenerator : IIncrementalGenerator
 {
     public void Initialize(IncrementalGeneratorInitializationContext context)
     {
@@ -30,7 +30,7 @@ public class AppSettingsGenerator : IIncrementalGenerator
             """
             using System;
 
-            namespace Lemworks.Generators.Configuration
+            namespace Lemworks.Configuration
             {
                 public static class AppSettings
             """);
@@ -94,7 +94,7 @@ public class AppSettingsGenerator : IIncrementalGenerator
                         builder.Append("public const string ");
                         builder.Append(stack.First());
                         builder.Append(" = \"");
-                        builder.Append(string.Join("__", stack.Reverse()));
+                        builder.Append(string.Join(":", stack.Reverse()));
                         builder.AppendLine("\";");
                         stack.Pop();
                     }

@@ -1,6 +1,6 @@
 ﻿namespace AppSettingsGenerator;
 
-public class AppSettingsFile
+internal class AppSettingsFile
 {
     public string FileName { get; }
     
