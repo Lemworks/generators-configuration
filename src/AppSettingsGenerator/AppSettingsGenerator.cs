@@ -6,7 +6,7 @@ using Microsoft.CodeAnalysis.Text;
 namespace AppSettingsGenerator;
 
 [Generator]
-internal class AppSettingsGenerator : IIncrementalGenerator
+internal sealed class AppSettingsGenerator : IIncrementalGenerator
 {
     public void Initialize(IncrementalGeneratorInitializationContext context)
     {
