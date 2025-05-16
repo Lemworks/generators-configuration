@@ -3,7 +3,7 @@ using System.Text.Json;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.Text;
 
-namespace AppSettingsGenerator;
+namespace Lemworks.Generators.Configuration;
 
 [Generator]
 internal sealed class AppSettingsGenerator : IIncrementalGenerator

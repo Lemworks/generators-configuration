@@ -3,6 +3,10 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "items", "items", "{DF6F9C39-1CFF-4529-98F6-0DA81C5F3F67}"
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
+		integration-test.ps1 = integration-test.ps1
+		LICENSE = LICENSE
+		nuget.config = nuget.config
+		nuget.integration-tests.config = nuget.integration-tests.config
 		README.md = README.md
 	EndProjectSection
 EndProject

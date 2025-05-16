@@ -24,7 +24,7 @@ internal sealed class SnapshotTests
             }
             """);
 
-        var driver = CSharpGeneratorDriver.Create(new AppSettingsGenerator())
+        var driver = CSharpGeneratorDriver.Create(new Lemworks.Generators.Configuration.AppSettingsGenerator())
             .AddAdditionalTexts([additionalText])
             .RunGenerators(CSharpCompilation.Create("Testing"));
 

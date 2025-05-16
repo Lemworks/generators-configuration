@@ -1,4 +1,4 @@
-﻿namespace AppSettingsGenerator;
+﻿namespace Lemworks.Generators.Configuration;
 
 internal sealed record AppSettingsFile
 {

@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Lemworks.Configuration" Version="0.0.1-beta" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="9.0.5" />
+    <PackageReference Include="TUnit" Version="0.19.143" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <AdditionalFiles Include="..\AppSettingsGenerator.IntegrationTests\appsettings.json" />
+    <Content Include="..\AppSettingsGenerator.IntegrationTests\appsettings.json" CopyToOutputDirectory="Always" />
+    <Compile Include="..\AppSettingsGenerator.IntegrationTests\*.cs" Link="%(Filename)%(Extension)"/>
+  </ItemGroup>
+  
+</Project>
