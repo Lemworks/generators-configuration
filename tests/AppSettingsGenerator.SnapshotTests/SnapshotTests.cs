@@ -17,10 +17,11 @@ internal sealed class SnapshotTests
                 "Object": {
                     "Value": 1,
                     "Object": {
-                        "Something": null
+                        "Something_Else": null
                     }
                 },
-                "Last": ""
+                "3 Object 5": "",
+                "Last.Object-+100": ""
             }
             """);
 

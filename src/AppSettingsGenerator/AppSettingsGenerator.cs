@@ -1,5 +1,6 @@
 ﻿using System.Text;
 using System.Text.Json;
+using System.Text.RegularExpressions;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.Text;
 
@@ -92,7 +93,7 @@ internal sealed class AppSettingsGenerator : IIncrementalGenerator
                     {
                         builder.Append(Indent(depth));
                         builder.Append("public const string ");
-                        builder.Append(stack.First());
+                        builder.Append(Sanitize(stack.First()));
                         builder.Append(" = \"");
                         builder.Append(string.Join(":", stack.Reverse()));
                         builder.AppendLine("\";");
@@ -117,4 +118,15 @@ internal sealed class AppSettingsGenerator : IIncrementalGenerator
     }
 
     private static string Indent(int depth) => new(' ', depth * 4);
+    
+    private static readonly Regex NotAllowedCharactersRegex = new("[^a-zA-Z0-9_]");
+    
+    private static string Sanitize(string name)
+    {
+        name = NotAllowedCharactersRegex.Replace(name, string.Empty);
+
+        return char.IsDigit(name.FirstOrDefault())
+            ? "_" + name
+            : name;
+    }
 }

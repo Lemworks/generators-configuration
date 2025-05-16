@@ -11,9 +11,10 @@ namespace Generated.Configuration
             public const string Value = "Object:Value";
             public static class Object
             {
-                public const string Something = "Object:Object:Something";
+                public const string Something_Else = "Object:Object:Something_Else";
             }
         }
-        public const string Last = "Last";
+        public const string _3Object5 = "3 Object 5";
+        public const string LastObject100 = "Last.Object-+100";
     }
 }
