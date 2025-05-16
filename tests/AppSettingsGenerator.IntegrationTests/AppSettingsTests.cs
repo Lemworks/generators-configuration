@@ -1,5 +1,5 @@
 ﻿using System.Diagnostics.CodeAnalysis;
-using Lemworks.Configuration;
+using Generated.Configuration;
 using Microsoft.Extensions.Configuration;
 
 namespace AppSettingsGenerator.IntegrationTests;
@@ -11,7 +11,7 @@ internal sealed class AppSettingsTests
     [Test]
     public async Task ShouldContainAppSettingsType()
     {
-        await Assert.That(Type.GetType("Lemworks.Configuration.AppSettings")).IsNotNull();
+        await Assert.That(Type.GetType("Generated.Configuration.AppSettings")).IsNotNull();
     }
     
     [Test]

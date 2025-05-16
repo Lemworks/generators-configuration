@@ -30,7 +30,7 @@ internal sealed class AppSettingsGenerator : IIncrementalGenerator
             """
             using System;
 
-            namespace Lemworks.Configuration
+            namespace Generated.Configuration
             {
                 public static class AppSettings
             """);
