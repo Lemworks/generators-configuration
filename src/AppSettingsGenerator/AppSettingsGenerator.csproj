@@ -11,6 +11,13 @@
         <EnforceExtendedAnalyzerRules>true</EnforceExtendedAnalyzerRules>
         <RootNamespace>Lemworks.Generators.Configuration</RootNamespace>
         <AssemblyName>Lemworks.Generators.Configuration</AssemblyName>
+        <Authors>Lemworks</Authors>
+        <Company>Lemworks</Company>
+        <PackageLicenseFile>LICENSE</PackageLicenseFile>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <RepositoryUrl>https://github.com/Lemworks/generators-configuration</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <PackageTags>configuration generators appsettings const</PackageTags>
     </PropertyGroup>
 
     <ItemGroup>
@@ -33,6 +40,8 @@
 
     <ItemGroup>
         <None Include="$(OutputPath)\$(AssemblyName).dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
+        <None Include="..\..\LICENSE" Pack="true" PackagePath=""/>
+        <None Include="..\..\README.md" Pack="true" PackagePath=""/>
     </ItemGroup>
     
     <ItemGroup>
