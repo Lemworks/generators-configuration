@@ -13,6 +13,7 @@
         <AssemblyName>Lemworks.Generators.Configuration</AssemblyName>
         <Authors>Lemworks</Authors>
         <Company>Lemworks</Company>
+        <PackageDescription>Source-generated configuration keys from your appsettings.json</PackageDescription>
         <PackageLicenseFile>LICENSE</PackageLicenseFile>
         <PackageReadmeFile>README.md</PackageReadmeFile>
         <RepositoryUrl>https://github.com/Lemworks/generators-configuration</RepositoryUrl>
