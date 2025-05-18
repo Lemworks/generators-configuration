@@ -1,11 +1,11 @@
-Remove-Item -Path .\artifacts\*.0.0.1-integration-test.nupkg -ErrorAction SilentlyContinue
+Remove-Item -Path $PSScriptRoot\artifacts\*.0.0.1-integration-test.nupkg -ErrorAction SilentlyContinue
 
-Remove-Item -Path .\packages\ -Recurse -ErrorAction SilentlyContinue
+Remove-Item -Path $PSScriptRoot\packages\ -Recurse -ErrorAction SilentlyContinue
 
-dotnet pack -c Release -o .\artifacts -p:Version=0.0.1-integration-test
+dotnet pack -c Release -o $PSScriptRoot\artifacts -p:Version=0.0.1-integration-test
 
-dotnet restore .\tests\AppSettingsGenerator.NugetIntegrationTests --packages .\packages --configfile .\nuget.integration-tests.config
+dotnet restore $PSScriptRoot\tests\AppSettingsGenerator.NugetIntegrationTests --packages $PSScriptRoot\packages --configfile $PSScriptRoot\nuget.integration-tests.config
 
-dotnet build .\tests\AppSettingsGenerator.NugetIntegrationTests -c Release --packages .\packages --no-restore
+dotnet build $PSScriptRoot\tests\AppSettingsGenerator.NugetIntegrationTests -c Release --packages $PSScriptRoot\packages --no-restore
 
-dotnet test .\tests\AppSettingsGenerator.NugetIntegrationTests -c Release --no-build --no-restore
+dotnet test $PSScriptRoot\tests\AppSettingsGenerator.NugetIntegrationTests -c Release --no-build --no-restore
