@@ -39,7 +39,7 @@ The keys will be generated as const strings in a `AppSettings` class
 ```csharp
 using System;
 
-namespace Lemworks.Configuration
+namespace Generated.Configuration
 {
     public static class AppSettings
     {
@@ -62,13 +62,13 @@ namespace Lemworks.Configuration
 
 Use the keys in your code like this
 ```csharp
-using Lemworks.Configuration;
+using Generated.Configuration;
 
 var configuration = new ConfigurationBuilder()
     .AddJsonFile("appsettings.json")
     .Build();
         
-configuration.GetConnectionString(AppSettings.SqlServer) // "Server=(localdb)\\mssqllocaldb;Database=DatabaseName;Trusted_Connection=True"
+configuration.GetConnectionString(AppSettings.ConnectionStrings.SqlServer) // "Server=(localdb)\\mssqllocaldb;Database=DatabaseName;Trusted_Connection=True"
 configuration[AppSettings.Logging.LogLevel.Default] // "Information"
 configuration[AppSettings.Logging.LogLevel.Microsoft] // "Warning"
 ```
