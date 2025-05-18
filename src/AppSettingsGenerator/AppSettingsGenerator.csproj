@@ -9,6 +9,7 @@
         <IncludeBuildOutput>false</IncludeBuildOutput>
         <IsRoslynComponent>true</IsRoslynComponent>
         <EnforceExtendedAnalyzerRules>true</EnforceExtendedAnalyzerRules>
+        <NoWarn>NU5128</NoWarn>
         <RootNamespace>Lemworks.Generators.Configuration</RootNamespace>
         <AssemblyName>Lemworks.Generators.Configuration</AssemblyName>
         <Authors>Lemworks</Authors>
