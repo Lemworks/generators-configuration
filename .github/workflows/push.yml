@@ -5,8 +5,13 @@ on:
     tags:
       - '*.*.*'
 
+concurrency:
+  group: ${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   push:
+    timeout-minutes: 5
     runs-on: ubuntu-latest
 
     steps:
