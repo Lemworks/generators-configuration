@@ -2,7 +2,7 @@ Remove-Item -Path .\artifacts\*.0.0.1-integration-test.nupkg -ErrorAction Silent
 
 Remove-Item -Path .\packages\ -Recurse -ErrorAction SilentlyContinue
 
-dotnet pack -c Release -o .\artifacts -p:Version=0.0.1-integration-test
+dotnet pack -c Release -o .\artifacts -p:Version=0.0.1-integration-test -p:MinVerSkip=true
 
 dotnet restore .\tests\AppSettingsGenerator.NuGetIntegrationTests --packages .\packages --configfile .\nuget.integration-tests.config
 
